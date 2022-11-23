@@ -14,10 +14,10 @@ const setupInput = function(conn) {
 
 const handleUserInput = function(key) {
   if (key === '\u0003') process.exit();
-  if (key === 'w') return "Move: up";
-  if (key === 'a') return "Move: left";
-  if (key === 's') return "Move: down";
-  if (key === 'd') return "Move: right";
+  if (key === 'w') connection.write("Move: up");
+  if (key === 'a') connection.write("Move: left");
+  if (key === 's') connection.write("Move: down");
+  if (key === 'd') connection.write("Move: right");
 };
 
 module.exports = {
